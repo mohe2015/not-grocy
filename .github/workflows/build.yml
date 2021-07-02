@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 14.x, 16.x] # 10.x from debian buster
+        node-version: [10.x, 16.x] # 10.x from debian buster
         php-version: [7.3, 7.4]
 
     steps:
