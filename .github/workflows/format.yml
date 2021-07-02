@@ -1,4 +1,4 @@
-name: Format
+name: Format PHP
 
 on:
   push:
@@ -13,16 +13,10 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
         php-version: [7.4]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
     - name: Use PHP ${{ matrix.php-version }}
       uses: shivammathur/setup-php@e02a1810e66ae357773a8f82626c7965d13ca75c # pinned 2.11.0
       with:
