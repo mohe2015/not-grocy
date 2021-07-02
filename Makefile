@@ -209,13 +209,13 @@ pack: publish manifest
 	mkdir -p release
 	tar cfJ release/not-grocy-$(shell git describe --tags).tar.xz \
 		changelog \
-		controllers \
+		php/Controllers \
 		data/.htaccess \
 		data/plugins \
-		helpers \
+		php/Helpers \
 		localization \
-		middleware \
-		migrations \
+		php/Middleware \
+		php/Migrations \
 		public \
 		services \
 		vendor \
