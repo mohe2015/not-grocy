@@ -1,4 +1,4 @@
-name: Format PHP
+name: Check PHP formatting
 
 on:
   push:
