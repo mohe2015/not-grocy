@@ -219,9 +219,9 @@ pack: publish manifest
 		public \
 		services \
 		vendor \
-		views \
-		app.php \
-		config-dist.php \
+		php/Views \
+		php/app.php \
+		php/config-dist.php \
 		grocy.openapi.json \
 		php/routes.php \
 		version.json
