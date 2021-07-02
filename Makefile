@@ -230,7 +230,6 @@ pack: publish manifest
 # only permit to build a release zip from an actual commit (which will be referenced in version.json)
 .PHONY=manifest
 manifest:
-	git add version.json
 	git update-index --refresh 
 	git diff-index --quiet HEAD --
 	php -r 'echo json_encode(["Version" => trim(`git describe --tags`), "ReleaseDate" => date("Y-m-d")]);' > version.json
