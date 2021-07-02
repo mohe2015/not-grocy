@@ -223,7 +223,7 @@ pack: publish manifest
 		app.php \
 		config-dist.php \
 		grocy.openapi.json \
-		routes.php \
+		php/routes.php \
 		version.json
 
 # this will error if the working tree is dirty (git diff-index will return a non-zero status code)
