@@ -217,7 +217,7 @@ pack: publish manifest
 		php/Middleware \
 		php/Migrations \
 		public \
-		services \
+		php/Services \
 		vendor \
 		php/Views \
 		php/app.php \
