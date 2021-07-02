@@ -26,6 +26,7 @@ jobs:
         uses: shivammathur/setup-php@e02a1810e66ae357773a8f82626c7965d13ca75c # pinned 2.11.0
         with:
           php-version: ${{ matrix.php-version }}
+      - run: make release
       - name: Release
         uses: softprops/action-gh-release@9729932bfb75c05ad1f6e3a729294e05abaa7001 # 2021-05-03
         with:
