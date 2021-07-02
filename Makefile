@@ -207,7 +207,7 @@ release:
 .PHONY=pack
 pack: publish manifest
 	mkdir -p release
-	tar cvfJ release/not-grocy-$(shell git describe --tags).tar.xz \
+	tar cfJ release/not-grocy-$(shell git describe --tags).tar.xz \
 		changelog \
 		controllers \
 		data/.htaccess \
