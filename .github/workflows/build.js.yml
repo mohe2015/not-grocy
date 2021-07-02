@@ -13,7 +13,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x, 16.x]
+        php-version: [7.4]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,4 +23,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
+    - name: Use PHP ${{ matrix.php-version }}
+      uses: shivammathur/setup-php@e02a1810e66ae357773a8f82626c7965d13ca75c # pinned 2.11.0
+      with:
+        php-version: ${{ matrix.php-version }}
     - run: make build
