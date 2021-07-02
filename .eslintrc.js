@@ -1,18 +1,20 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:vue/essential',
-    "eslint:recommended"
+    'airbnb-base',
   ],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
   },
   plugins: [
-    'vue'
+    'vue',
+    '@typescript-eslint',
   ],
   globals: {
     // from vendor.js:
