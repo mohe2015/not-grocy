@@ -23,4 +23,4 @@ jobs:
         php-version: ${{ matrix.php-version }}
     - run: mkdir --parents tools/php-cs-fixer
     - run: composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
-    - run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix php --dry-run
+    - run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix php --verbose --dry-run
