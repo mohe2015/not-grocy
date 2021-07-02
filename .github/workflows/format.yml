@@ -1,4 +1,4 @@
-name: Build
+name: Format
 
 on:
   push:
@@ -13,8 +13,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 14.x, 16.x] # 10.x from debian buster
-        php-version: [7.3, 7.4]
+        node-version: [16.x]
+        php-version: [7.4]
 
     steps:
     - uses: actions/checkout@v2
@@ -27,4 +27,6 @@ jobs:
       uses: shivammathur/setup-php@e02a1810e66ae357773a8f82626c7965d13ca75c # pinned 2.11.0
       with:
         php-version: ${{ matrix.php-version }}
-    - run: make build
+    - run: mkdir --parents tools/php-cs-fixer
+    - run: composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
+    - run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix php

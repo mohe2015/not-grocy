@@ -11,8 +11,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x] # only one because this is a release
-        php-version: [7.4] # only one because this is a release
+        node-version: [10.x] # only one because this is a release
+        php-version: [7.3] # only one because this is a release
 
     steps:
       - name: Checkout
